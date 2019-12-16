@@ -1,4 +1,4 @@
-package com.qax.hello.Dao;
+package com.qax.hello.dao;
 
 import com.qax.hello.po.Poem;
 import org.springframework.data.elasticsearch.repository.ElasticsearchRepository;

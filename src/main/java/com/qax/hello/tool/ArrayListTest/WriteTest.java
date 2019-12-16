@@ -1,5 +1,6 @@
 package com.qax.hello.tool.ArrayListTest;
 
+import com.google.common.collect.Lists;
 import org.openjdk.jmh.annotations.*;
 import org.openjdk.jmh.runner.Runner;
 import org.openjdk.jmh.runner.RunnerException;
@@ -27,7 +28,7 @@ public class WriteTest {
     @OutputTimeUnit(TimeUnit.MICROSECONDS)
     public void testArrayList() {
         //指定初始化大小
-        List<String> list = new ArrayList<String>();
+        List<String> list = Lists.newArrayList();
         for (int i = 0; i < TEN_MILLION; i++) {
             list.add("111");
         }
@@ -38,7 +39,7 @@ public class WriteTest {
     @OutputTimeUnit(TimeUnit.MICROSECONDS)
     public void testArrayListSize() {
         //指定初始化大小
-        List<String> list = new ArrayList<String>(TEN_MILLION);
+        List<String> list = new ArrayList<>(TEN_MILLION);
         for (int i = 0; i < TEN_MILLION; i++) {
             list.add("111");
         }
@@ -49,7 +50,7 @@ public class WriteTest {
     @OutputTimeUnit(TimeUnit.MICROSECONDS)
     public void testLinkedList() {
         //指定初始化大小
-        List<String> list = new LinkedList<String>();
+        List<String> list = new LinkedList<>();
         for (int i = 0; i < TEN_MILLION; i++) {
             list.add("111");
         }

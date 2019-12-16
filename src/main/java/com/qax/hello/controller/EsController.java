@@ -1,9 +1,7 @@
-package com.qax.hello.Controller;
+package com.qax.hello.controller;
 
-import com.qax.hello.Dao.PoemRepository;
+import com.qax.hello.dao.PoemRepository;
 import com.qax.hello.po.Poem;
-import com.qax.hello.tool.DelayTask.DelayTaskConsumer;
-import com.qax.hello.tool.DelayTask.DelayTaskProducer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.elasticsearch.core.ElasticsearchTemplate;
 import org.springframework.web.bind.annotation.*;

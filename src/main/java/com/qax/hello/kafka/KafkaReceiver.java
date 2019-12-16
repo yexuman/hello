@@ -24,8 +24,9 @@ public class KafkaReceiver {
         Optional<?> kafkaMessage = Optional.ofNullable(record.value());
         if (kafkaMessage.isPresent()) {
             Object o = kafkaMessage.get();
-            logger.info("-------消费到了记录---------- record =" + record);
-            logger.info("-------消息内容----------- message =" + o);
+            String s1 = String.format("-------消费到了记录---------- record = %s", record);
+            logger.info(s1);
+            logger.info(String.format("-------消息内容----------- message = %s", o));
         }
 
     }

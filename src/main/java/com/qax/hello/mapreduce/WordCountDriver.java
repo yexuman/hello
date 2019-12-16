@@ -1,4 +1,4 @@
-package com.qax.hello.MapReduce;
+package com.qax.hello.mapreduce;
 
 /**
  * @author yexuman
@@ -6,7 +6,6 @@ package com.qax.hello.MapReduce;
  */
 
 import java.io.IOException;
-import java.util.StringTokenizer;
 
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.Path;

@@ -1,4 +1,4 @@
-package com.qax.hello.Controller;
+package com.qax.hello.controller;
 
 import com.qax.hello.kafka.KfkaProducer;
 import org.springframework.web.bind.annotation.GetMapping;
