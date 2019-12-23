@@ -48,6 +48,9 @@ public class GuavaTest {
         }
     };
 
+    /**
+     * 定义缓存的策略
+     */
     private static final LoadingCache<Long, Student> useCacheData = CacheBuilder.newBuilder()
             .expireAfterAccess(2, TimeUnit.SECONDS)
             .expireAfterWrite(2, TimeUnit.SECONDS)
@@ -167,6 +170,8 @@ public class GuavaTest {
         //如果我们的应用系统，并不想使用一些第三方缓存组件（如redis），我们仅仅想在本地有一个功能足够强大的缓存，
         // 很可惜JDK提供的那些SET/MAP还不行！
 
+        Student student=useCacheData.apply(1L);
+        System.out.println(student);
     }
 
 }
