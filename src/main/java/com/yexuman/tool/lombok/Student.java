@@ -17,6 +17,7 @@ public class Student {
     /**
      * 告诉编译器，参数非空 和RequiredArgsConstructor配合生成静态构造方法
      */
+    private Long id;
     @NonNull
     private String name;
     private Integer age;
