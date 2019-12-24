@@ -22,7 +22,7 @@ public class RedissonManager {
                     .setConnectTimeout(30000)//同任何节点建立连接时的等待超时。时间单位是毫秒。
                     .setTimeout(3000)//等待节点回复命令的时间。该时间从命令发送成功时开始计时。
                     .setRetryInterval(3000)//当与某个节点的连接断开时，等待与其重新建立连接的时间间隔。时间单位是毫秒。
-                    .addNodeAddress("redis://127.0.0.1:7000","redis://127.0.0.1:7001","redis://127.0.0.1:7002","redis://127.0.0.1:7003","redis://127.0.0.1:7004","redis://127.0.0.1:7005");
+                    .addNodeAddress("redis://192.168.218.131:6379");
             redisson = Redisson.create(config);
 
             RAtomicLong atomicLong = redisson.getAtomicLong(RAtomicName);
