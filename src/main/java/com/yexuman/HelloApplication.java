@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.scheduling.annotation.EnableScheduling;
 
 // 开启定时任务
-@EnableScheduling
+//@EnableScheduling
 @SpringBootApplication
 public class HelloApplication {
 

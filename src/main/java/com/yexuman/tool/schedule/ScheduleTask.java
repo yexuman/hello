@@ -4,6 +4,7 @@ import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClientBuilder;
+import org.springframework.scheduling.annotation.Async;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -19,7 +20,8 @@ import java.io.IOException;
 @Component
 public class ScheduleTask {
 
-    @Scheduled(fixedRate = 10000)
+    @Scheduled(fixedRate = 50000)
+    @Async
     public void scheduleGet() {
         CloseableHttpClient closeableHttpClient = HttpClientBuilder.create().build();
         System.out.println("定时任务：" + System.currentTimeMillis());
